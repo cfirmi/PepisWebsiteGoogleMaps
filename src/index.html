@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Pepis3</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-md bg-light navbar-dark fixed-top">
+                <div class="container-fluid">
+                    <div class="fa fa-bars"></div>
+                    <i id="signin-Mobile" class="fa fa-google"></i>
+                    </div>
+                    
+            </nav>
+                <a href="index.html"><img class="pepisLogo" draggable="false" src="img/Pepis Guy.png" alt=""></a>
+            <div class="sidebar-nav-closed">
+                <a href="#c"></a>
+                <a href="#">makubg a change</a>
+                <!-- <div class="menu-items">
+                <ul class="moreInfo">
+                    <li class="sidenav-item"><a href="#">locations</a></li>
+                </ul>
+                </div>
+
+                <div class="menu-items">
+                    <ul class="foodMenu">
+                        <a href="#"><li class="sidenav-item pizza">pizza</li></a>
+                        <a href="#"><li class="sidenav-item subs">subs</li></a>
+                        <a href="#"><li class="sidenav-item chicken">chicken</li></a>
+                        <a href="#"><li class="sidenav-item salads">salads</li></a>
+                        <a href="#"><li class="sidenav-item desserts">desserts</li></a>
+                        <a href="#"><li class="sidenav-item drinks">drinks</li></a>
+                    </ul>
+                </div> -->
+
+            </div>
+            <!-- Close SideBar  Start -->
+            <div class="close-rect-hidden">
+                <div class="blank"></div>
+            </div>
+            <!-- does this change the file -->
+            <!-- Close SideBar End -->
+        <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+            apiKey: "AIzaSyDexYjsGAxrcRctLQU9Q6ha0KAsnTed5EQ",
+            authDomain: "signing-37e82.firebaseapp.com",
+            databaseURL: "https://signing-37e82.firebaseio.com",
+            projectId: "signing-37e82",
+            storageBucket: "signing-37e82.appspot.com",
+            messagingSenderId: "440753788976",
+            };
+
+            var ref = firebase.database().ref('signing-37e82:');
+            var messagesRef = ref.child('messages');
+
+            messagesRef.push({
+                name: 'Christian',
+                text: 'Hello everyone'
+            });
+
+        </script>
+        <script src="js/firebase.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/navbar.js"></script>
+    </body>
+</html>

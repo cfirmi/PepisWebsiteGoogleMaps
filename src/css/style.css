@@ -1,0 +1,60 @@
+body {
+  background: #0F1222; }
+
+.pepisLogo {
+  height: 100px;
+  position: absolute;
+  z-index: 10001;
+  margin-top: 10px;
+  margin-left: 10%;
+  transition: all 0.4s ease-in-out; }
+
+.pepisLogo-nav {
+  position: fixed;
+  margin-left: 40%;
+  height: 90px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out; }
+
+.fa-bars {
+  color: black;
+  font-size: 25px;
+  cursor: pointer; }
+
+.sidebar-nav-closed {
+  position: fixed;
+  background: #0F1222;
+  height: 100vh;
+  width: 40%;
+  top: 0;
+  left: -40%;
+  transition: all 0.4s ease-in-out; }
+
+.sidebar-nav-opened {
+  position: fixed;
+  background: white;
+  height: 100vh;
+  width: 40%;
+  top: 0;
+  left: 0px;
+  border-right: 4px solid white;
+  z-index: 10009; }
+
+.close-rect-hidden {
+  top: 0;
+  left: 0%;
+  position: fixed;
+  width: 100%;
+  transition: all 0.6s ease-in-out;
+  z-index: 1001; }
+
+.close-rect-showing {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.76);
+  margin-left: 40%;
+  height: 100vh;
+  transition: all 0.6s ease-in-out;
+  cursor: pointer; }
