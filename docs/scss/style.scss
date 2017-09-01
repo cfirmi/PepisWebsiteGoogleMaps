@@ -92,6 +92,7 @@ body {
     color: $mn-color; }
 
   #Y {
+    height: 30px;
   margin-top: 180px;
   margin-left: 50%;
   transform: $trans; }
@@ -120,7 +121,9 @@ body {
 
     body {
       background: pink;}
-
+    #Y {
+      height: 50px;
+    }
     .infoNav {
       display: inline; }
     
