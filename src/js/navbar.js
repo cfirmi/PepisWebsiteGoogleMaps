@@ -7,10 +7,14 @@ $(document).ready(function() {
         $('.sidebar-nav-closed').toggleClass('sidebar-nav-opened')
         $('.close-rect-hidden').toggleClass('close-rect-showing')
     });
-      $('.fa-bars').click(function() {
+    $('.fa-bars').click(function() {
     $('.pepisLogo').toggleClass('pepisLogo-nav')
     });
     $('.close-rect-hidden').click(function() {
     $('.pepisLogo').toggleClass('pepisLogo-nav')
   });
+  
+
+
+
 });

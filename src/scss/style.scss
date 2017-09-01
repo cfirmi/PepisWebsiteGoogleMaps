@@ -1,14 +1,23 @@
 // Main Sass File
 $bg-color: #0F1222;
+$mn-color: #FF8700;
+$trans: translate(-50%);
+
+* {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif }
+
 body {
     background: $bg-color  }
   
   .pepisLogo {
     height: 100px;
-    position: absolute;
+    position: fixed;
     z-index: 10001;
     margin-top: 10px;
-    margin-left: 10%;
+    margin-left: 80%;
     transition: all 0.4s ease-in-out; }
   
   .pepisLogo-nav {
@@ -61,3 +70,60 @@ body {
     transition: all 0.6s ease-in-out;
     cursor: pointer; }
 
+  .mobileTitle1 {
+    position: absolute;
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 50%;
+    text-align: center;
+    transform: $trans;
+    color: $mn-color; 
+    text-transform: uppercase;}
+    
+  .mobileTitle2 {
+    position: absolute;
+    margin-top: 60px;
+    font-size: 100px;
+    margin-left: 50%;
+    transform: $trans;
+    text-transform: uppercase; }
+
+  #title {
+    color: $mn-color; }
+
+  #Y {
+  margin-top: 180px;
+  margin-left: 50%;
+  transform: $trans; }
+
+  .sidenav {
+    height: 50vh;
+    padding-left: 0px;
+    margin-top: 30px; }
+
+  .sidenav-item {
+    padding-left: 15px;
+    padding-bottom: 10px;
+    background: white;
+    padding-top: 25px;
+    border-bottom: 0.5px solid rgba(38, 38, 38, 0.24);
+    text-transform: capitalize;  }
+
+  .sidenav-item:hover {
+    color: $mn-color;}
+        
+  .infoNav {
+    display: none;
+  }
+    
+    @media only screen and (min-width: 600px) {
+
+    body {
+      background: pink;}
+
+    .infoNav {
+      display: inline; }
+    
+    .foodNav {
+      display: none;  }
+    }
