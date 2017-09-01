@@ -6,29 +6,21 @@
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="img/pepis-guy.png">
+        
         <title>Pepis3</title>
     </head>
 
     <body>
         <nav class="navbar navbar-expand-md bg-light navbar-dark fixed-top">
-                <div class="container-fluid">
-                    <div class="fa fa-bars"></div>
-                    <i id="signin-Mobile" class="fa fa-google"></i>
-                    </div>
-                    
-            </nav>
-                <a href="index.html"><img class="pepisLogo" draggable="false" src="img/Pepis Guy.png" alt=""></a>
+            <div class="fa fa-bars"></div>            
+        </nav>
+            <a href="index.html"><img class="pepisLogo" draggable="false" src="img/pepis-guy.png" alt=""></a>
+       
+            <section class="foodNav">
             <div class="sidebar-nav-closed">
-                <a href="#c"></a>
-                <a href="#">makubg a change</a>
-                <!-- <div class="menu-items">
-                <ul class="moreInfo">
-                    <li class="sidenav-item"><a href="#">locations</a></li>
-                </ul>
-                </div>
-
                 <div class="menu-items">
-                    <ul class="foodMenu">
+                    <ul class="sidenav">
                         <a href="#"><li class="sidenav-item pizza">pizza</li></a>
                         <a href="#"><li class="sidenav-item subs">subs</li></a>
                         <a href="#"><li class="sidenav-item chicken">chicken</li></a>
@@ -36,15 +28,45 @@
                         <a href="#"><li class="sidenav-item desserts">desserts</li></a>
                         <a href="#"><li class="sidenav-item drinks">drinks</li></a>
                     </ul>
-                </div> -->
+                </div>
+            </div>
+        </section>
+        <!-- Mobile Side Navigation -->
+        
+        <!-- Desktop Side Navigation -->
+        <section class="infoNav">
+            <div class="sidebar-nav-closed">
+                <div class="menu-items">
+                    <ul class="sidenav">
+                        <a href="#"><li class="sidenav-item pizza">Locations</li></a>
+                        <a href="#"><li class="sidenav-item subs">Corporate Orders</li></a>
+                        <a href="#"><li class="sidenav-item chicken">Contact</li></a>
+                        <a href="#"><li class="sidenav-item salads">About Pepi's</li></a>
+                    </ul>
+                </div>
+            </div>
+         </section>
+        <!-- Desktop Side Navigation -->
 
-            </div>
-            <!-- Close SideBar  Start -->
-            <div class="close-rect-hidden">
-                <div class="blank"></div>
-            </div>
+        <div class="mobileTitle1">
+                <h1 unselectable="on">weclome to</h1>
+        </div>
+        <div class="mobileTitle2">
+                <p unselectable="on" id="title">pepi's</p>
+        </div>
+        <img id="Y" draggable="false" src="img/50yrs.png">
+
+        <!-- Close SideBar  Start -->
+        <div class="close-rect-hidden">
+            <div class="blank"></div>
+        </div>
             <!-- does this change the file -->
             <!-- Close SideBar End -->
+
+
+
+
+            
         <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
         <script>
             // Initialize Firebase
@@ -56,14 +78,6 @@
             storageBucket: "signing-37e82.appspot.com",
             messagingSenderId: "440753788976",
             };
-
-            var ref = firebase.database().ref('signing-37e82:');
-            var messagesRef = ref.child('messages');
-
-            messagesRef.push({
-                name: 'Christian',
-                text: 'Hello everyone'
-            });
 
         </script>
         <script src="js/firebase.js"></script>
