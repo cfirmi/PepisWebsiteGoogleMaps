@@ -87,6 +87,7 @@ body {
   color: #FF8700; }
 
 #Y {
+  height: 30px;
   margin-top: 180px;
   margin-left: 50%;
   transform: translate(-50%); }
@@ -113,6 +114,8 @@ body {
 @media only screen and (min-width: 600px) {
   body {
     background: pink; }
+  #Y {
+    height: 50px; }
   .infoNav {
     display: inline; }
   .foodNav {
