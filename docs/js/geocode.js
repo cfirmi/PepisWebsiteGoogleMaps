@@ -109,13 +109,13 @@ const mapStyle = [
       }
     })
 
-    var infoWindow = new google.maps.infoWindow({
-      content: '<H1>WATER STREET</H1>'
-    });
+    // var infoWindow = new google.maps.infoWindow({
+    //   content: '<H1>WATER STREET</H1>'
+    // });
 
-    marker.addListener('click', function() {
-      infoWindow.open(map,marker);
-    });
+    // marker.addListener('click', function() {
+    //   infoWindow.open(map,marker);
+    // });
 
   }
 
