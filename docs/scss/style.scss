@@ -13,7 +13,7 @@ body {
     background: $bg-color  }
   
   .pepisLogo {
-    height: 100px;
+    height: 70px;
     position: fixed;
     z-index: 10001;
     margin-top: 10px;
@@ -83,7 +83,7 @@ body {
   .mobileTitle2 {
     position: absolute;
     margin-top: 60px;
-    font-size: 100px;
+    font-size: 90px;
     margin-left: 50%;
     transform: $trans;
     text-transform: uppercase; }
@@ -116,17 +116,49 @@ body {
   .infoNav {
     display: none;
   }
-    
+  .openMenu {
+    display: none;
+  }
+
+  @media only screen and (min-width: 350px) {
+    .pepisLogo {
+      height: 110px; }
+  }
     @media only screen and (min-width: 600px) {
 
     body {
-      background: pink;}
+      background: $bg-color;}
+      // background: pink;}
+
     #Y {
-      height: 50px;
-    }
+      height: 50px;}
     .infoNav {
       display: inline; }
     
     .foodNav {
-      display: none;  }
-    }
+      display: none; }
+
+    .openMenu {
+      display: initial;}
+
+    .secondNav {
+      margin-top: 20px;
+      text-align: center;
+      padding: 0px 0; 
+      background: white;}
+
+    .main-item {
+      height: 50px;
+      padding-top: 13px;
+      display: inline-block;
+      min-width: 50px;
+      margin-right: 20px;
+     }
+    .main-item:hover {
+      color: $mn-color;}
+    #map {
+      height: 400px;
+      width: 100%; }
+
+  }
+
