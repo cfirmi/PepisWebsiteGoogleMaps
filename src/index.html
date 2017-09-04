@@ -17,15 +17,15 @@
         </nav>
             <a href="index.html"><img class="pepisLogo" draggable="false" src="img/pepis-guy.png" alt=""></a>
             <div class="mobileTitle1">
-                    <h1 unselectable="on">welcome to</h1>
-                </div>
+                <h1 unselectable="on">welcome to</h1>
+            </div>
                
-                <div class="mobileTitle2">
-                     <p unselectable="on" id="title">pepi's</p>
-                </div>
+            <div class="mobileTitle2">
+                 <p unselectable="on" id="title">pepi's</p>
+            </div>
                 
-                <img id="Y" draggable="false" src="img/50yrs.png">
-            <section class="foodNav">
+            <img id="Y" draggable="false" src="img/50yrs.png">
+        <section class="foodNav">
             <div class="sidebar-nav-closed">
                 <div class="menu-items">
                     <ul class="sidenav">
@@ -49,7 +49,7 @@
                         <a href="#"><li class="sidenav-item pizza">Locations</li></a>
                         <a href="#"><li class="sidenav-item subs">Corporate Orders</li></a>
                         <a href="#"><li class="sidenav-item chicken">Contact</li></a>
-                        <a href="#"><li class="sidenav-item salads">About Pepi's</li></a>
+                        <a href="#"><li class="sidenav-item salads">About Pepi's</li>
                     </ul>
                 </div>
             </div>
@@ -60,14 +60,16 @@
         <section class="openMenu">
             <div class="secondNav">
                  <ul class="menuView">
-                    <a href="#"><li class="sidenav-item pizza">pizza</li></a>
-                    <a href="#"><li class="sidenav-item subs">subs</li></a>
-                    <a href="#"><li class="sidenav-item chicken">chicken</li></a>
-                    <a href="#"><li class="sidenav-item salads">salads</li></a>
-                    <a href="#"><li class="sidenav-item desserts">desserts</li></a>
-                    <a href="#"><li class="sidenav-item drinks">drinks</li></a>
-                </ul>
+                    <a href="#"><li class="main-item pizza">pizza</li></a>
+                    <a href="#"><li class="main-item subs">subs</li></a>
+                    <a href="#"><li class="main-item chicken">chicken</li></a>
+                    <a href="#"><li class="main-item salads">salads</li></a>
+                    <a href="#"><li class="main-item desserts">desserts</li></a>
+                    <a href="#"><li class="main-item drinks">drinks</li></a>
+                </ul>   
             </div>
+            <div id="mapgeo"></div>
+            <div id="map"></div>
         </section>
 
         <!-- Desketop Navigation strip -->
@@ -77,28 +79,14 @@
             <div class="blank"></div>
         </div>
         <!-- Close SideBar End -->
-
-            
-
-
-
-        <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
-        <script>
-            // Initialize Firebase
-            var config = {
-            apiKey: "AIzaSyDexYjsGAxrcRctLQU9Q6ha0KAsnTed5EQ",
-            authDomain: "signing-37e82.firebaseapp.com",
-            databaseURL: "https://signing-37e82.firebaseio.com",
-            projectId: "signing-37e82",
-            storageBucket: "signing-37e82.appspot.com",
-            messagingSenderId: "440753788976",
-            };
-
-        </script>
-        <script src="js/firebase.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="js/jquery.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/navbar.js"></script>
+        <script src="js/geocode.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfSSPwP0QXxhxU3CT08Gj-0ksvxB6LIic&callback=initMap"
+        async defer></script>
+        
     </body>
 </html>
