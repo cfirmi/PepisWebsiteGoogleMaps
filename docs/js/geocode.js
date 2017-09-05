@@ -81,33 +81,86 @@ const mapStyle = [
     }
   ]
 
+
   function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 13,
+      zoom: 12,
       center: {lat: 43.448280, lng: -80.459472},
       styles: mapStyle
     });
-    var marker = new google.maps.Marker({
-      position:{lat:43.4540762, lng:-80.4927792},
-      map: map,
-      icon:{
-        url:'img/icon_pizza.png',
+
+    // var im = 'https://media.ford.com/etc/designs/fordmedia/ford/clientlibs/main/images/icon_user.png';
+    var im = 'https://files-cloud.enjin.com/smiley/263_4.png?0'
+     document.getElementById('get_location').onclick = function() {
+       x = navigator.geolocation;
+       x.getCurrentPosition(success, failure);
+     
+       function success(position){
+         var lat = position.coords.latitude;
+         var lng = position.coords.longitude;
+         var coords = new google.maps.LatLng(lat, lng);
+         console.log(lat, lng);
+
+         var currentLocation = new google.maps.Marker({
+           position: coords,
+           map: map,
+           icon: im
+         });
       }
-    });
-    var marker = new google.maps.Marker({
-      position:{lat:43.4383209, lng:-80.478925},
-      map: map,
-      icon:{
-        url:'img/icon_pizza.png',
+    
+      function failure() {
+         $('body').append("<p> Nope it didnt work</p>");
+     }
+    };
+
+    //Array Of Locations
+    var marker = [
+      {
+      locations:{lat:43.4540762, lng:-80.4927792},
+      iconImage:'img/icon_pizza.png',
+      content: '<h4>Water Street Locations</h4>'
+    },
+    {
+      locations:{lat:43.4383209, lng:-80.478925},
+      iconImage:'img/icon_pizza.png',
+      content: '<h4>Courtland Ave Locations</h4>'
+    },
+    {
+      locations:{lat:43.429992, lng:-80.4362424},
+      iconImage:'img/icon_pizza.png',
+      content: `
+      <h4>King Street Locations</h4>
+      <p>This location color is Yellow, if you are inside the yellow box please call<p>
+      <p>519-893-8144</p>
+      `
+    }
+  
+    ];
+
+  // Loop Through Marker
+  for(var i = 0; i < marker.length; i++){
+    addMarker(marker[i]);
+  }
+
+
+    function addMarker(props){
+      var marker = new google.maps.Marker({
+        position: props.locations,
+        map: map,
+      });
+      if(props.iconImage){
+        marker.setIcon(props.iconImage);
       }
-    })
-    var marker = new google.maps.Marker({
-      position:{lat:43.429992, lng:-80.4362424},
-      map: map,
-      icon:{
-        url:'img/icon_pizza.png',
+      if(props.content){
+        var infoWindow = new google.maps.InfoWindow({
+          content:props.content
+        });
+        marker.addListener('click', function() {
+          infoWindow.open(map, marker);
+        });
       }
-    })
+    };
+
 
     var waterArea = [
       // QueenStreet
@@ -262,20 +315,15 @@ const mapStyle = [
       {lat:43.428256, lng:-80.467456},
       {lat:43.427157, lng:-80.466394},
       {lat:43.425301, lng:-80.465599},
-      
+      // Blockline
+      {lat:43.422389, lng:-80.462175},
+      {lat:43.419257, lng: -80.465723},
+      {lat:43.418786, lng:-80.467991},  
       // HomerWatson
       {lat:43.418326, lng:-80.470688},
       {lat:43.410016, lng:-80.461296},
-      
-      // Blockline
-      {lat:43.422387, lng:-80.462176},
-      {lat:43.419254, lng:-80.465738},
-      {lat:43.418786, lng:-80.467991},
-      
-      // Bleams
-      {lat:43.401662, lng:-80.496516},
       // Fischerhallman
-      
+      {lat:43.401662, lng:-80.496516},
       {lat:43.395800, lng:-80.494633},
       {lat:43.391793, lng:-80.491736},
       {lat:43.382270, lng:-80.488746},
@@ -286,7 +334,7 @@ const mapStyle = [
       {lat:43.365443, lng:-80.439217},
       {lat:43.377668, lng:-80.410080},
       {lat:43.387870, lng:-80.403255},
-      {lat:43.410338, lng: -80.391448},
+      {lat:43.410338, lng:-80.391448},
       {lat:43.415073, lng:-80.405141},
       {lat:43.420210, lng:-80.409363},
       {lat:43.430771, lng:-80.405709},
@@ -304,7 +352,7 @@ const mapStyle = [
       {lat:43.458825, lng:-80.456873},
       // Krug
       {lat:43.457268, lng:-80.461152},
-      {lat:43.456385, lng:-80.462033},
+      {lat:43.456385, lng:-80.462033}
     ]; 
     var waterArea = new google.maps.Polygon({
       paths: waterArea,
@@ -335,6 +383,7 @@ const mapStyle = [
     waterArea.setMap(map);
     courlandArea.setMap(map);
     kingArea.setMap(map);
+
     // var infoWindow = new google.maps.infoWindow({
     //   content: '<H1>WATER STREET</H1>'
     // });
