@@ -84,7 +84,7 @@ const mapStyle = [
   function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 13,
-      center: {lat: 43.4503, lng: -80.4832},
+      center: {lat: 43.448280, lng: -80.459472},
       styles: mapStyle
     });
     var marker = new google.maps.Marker({
@@ -109,6 +109,232 @@ const mapStyle = [
       }
     })
 
+    var waterArea = [
+      // QueenStreet
+      {lat:43.450943, lng:-80.488237},
+      {lat:43.438751, lng:-80.500447},
+      {lat:43.436914, lng:-80.503114},
+      {lat:43.434460, lng:-80.507419},
+      {lat:43.430958, lng:-80.517085},
+      {lat:43.430397, lng:-80.517815},
+      {lat:43.428769, lng:-80.523641},
+      // Fish
+      {lat:43.436441, lng:-80.529132},
+      // Victoria
+      {lat:43.428907, lng:-80.552842},
+      // Ira
+      {lat:43.423052, lng:-80.552805},
+      // Highland
+      {lat:43.421969, lng:-80.556582},
+      {lat:43.425047, lng:-80.561335},
+      {lat:43.426886, lng:-80.562492},
+      {lat:43.429325, lng:-80.562995},
+      {lat:43.433404, lng:-80.556363},
+      {lat:43.446128, lng:-80.571056},
+      // Erb Street
+      {lat:43.441966, lng:-80.584332},
+      // Wilmot
+      {lat:43.477486, lng:-80.623465},
+      // Conservation
+      {lat:43.479118, lng:-80.612276},
+      // Westmount
+      {lat:43.494260, lng:-80.569991},
+      // Benjamin Rd
+      {lat:43.498576, lng:-80.573162},
+      // Weber Street
+      {lat:43.504897, lng:-80.555511},
+      // St Jacobs
+      {lat:43.513847, lng:-80.556988},
+      // HighwayCross
+      {lat:43.511726, lng:-80.546589},
+      // Bridge Street
+      {lat:43.509546, lng:-80.542214},
+      {lat:43.517966, lng:-80.518268},
+      // University 
+      {lat:43.517593, lng:-80.514545},
+      {lat:43.518324, lng:-80.512367},
+      {lat:43.518892, lng:-80.507164},
+      {lat:43.518441, lng:-80.504750},
+      {lat:43.519802, lng:-80.503870},
+      {lat:43.521927, lng:-80.498187},
+      {lat:43.520621, lng:-80.497308},
+      {lat:43.520248, lng:-80.495392},
+      // WoolWich
+      {lat:43.517196, lng:-80.496493},
+      // Back on university
+      {lat:43.513698, lng:-80.498130},
+      {lat:43.505765, lng:-80.497303},
+      {lat:43.500149, lng:-80.493525},
+      {lat:43.500558, lng:-80.491887},
+      // Kiwanas Park
+      {lat:43.502716, lng:-80.478295},
+      
+      {lat:43.509998, lng:-80.460789},
+      // Bresleau
+      {lat:43.501102, lng:-80.419643},
+       // spitzig Rd
+      {lat:43.491035, lng:-80.413175},
+      // Victoria St
+      {lat:43.486175, lng:-80.416877},
+      {lat:43.477609, lng:-80.403494},
+      {lat:43.472750, lng:-80.402036},
+      {lat:43.471796, lng:-80.441288},
+      {lat:43.464232, lng:-80.464712},
+      // Krug St
+      {lat:43.458845, lng:-80.456892},
+      {lat:43.457341, lng:-80.461098},
+      {lat:43.456048, lng:-80.462600},
+      {lat:43.449343, lng:-80.481663},
+      // Weber St
+      {lat:43.451913, lng:-80.487457}
+      // {lat:},
+    ];
+    var courlandArea = [
+      // QueenStreet
+      {lat:43.450943, lng:-80.488237},
+      {lat:43.438751, lng:-80.500447},
+      {lat:43.436914, lng:-80.503114},
+      {lat:43.434460, lng:-80.507419},
+      {lat:43.430958, lng:-80.517085},
+      {lat:43.430397, lng:-80.517815},
+      {lat:43.428769, lng:-80.523641},
+      // Fish
+      {lat:43.436441, lng:-80.529132},
+      // Victoria
+      {lat:43.428907, lng:-80.552842},
+       // Ira
+      {lat:43.423052, lng:-80.552805},
+      // Highland
+      {lat:43.420467, lng:-80.560673},
+      // Trussler
+      {lat:43.414583, lng:-80.554144},
+      {lat:43.414591, lng:-80.553082},
+      // Ira Needles
+      {lat:43.412532, lng:-80.551795},
+      {lat:43.396769, lng:-80.534459},
+      // Bleams
+      {lat:43.399398, lng:-80.520057},
+      {lat:43.400694, lng:-80.501787},
+      // HomerWatson
+      {lat:43.410016, lng:-80.461296},
+      {lat:43.418326, lng:-80.470688},
+      // Blockline
+      {lat:43.418786, lng:-80.467991},
+      {lat:43.419254, lng:-80.465738},
+      {lat:43.422387, lng:-80.462176},
+      // Courtland
+      {lat:43.425301, lng:-80.465599},
+      {lat:43.427157, lng:-80.466394},
+      {lat:43.428256, lng:-80.467456},
+      // Highway
+      {lat:43.430807, lng:-80.467169},
+      {lat:43.431602, lng:-80.461057},
+      {lat:43.434196, lng:-80.457710},
+      // King Street
+      {lat:43.436292, lng:-80.457039},
+      // Stirling Av
+      {lat:43.444270, lng:-80.477057},
+      {lat:43.446407, lng:-80.475186},
+      {lat:43.447256, lng:-80.474467},
+      // Dumfries
+      {lat:43.450255, lng:-80.465390},
+      {lat:43.453753, lng:-80.469185},
+      // Krug
+      {lat:43.449319, lng:-80.481682},
+      // Queen
+      {lat:43.451928, lng:-80.487465}
+    ];
+    var kingArea =[
+      // Dumfries
+      {lat:43.453765, lng:-80.469183},
+      // Stirling
+      {lat:43.450236, lng:-80.465438},
+      {lat:43.447226, lng:-80.474481},
+      {lat:43.446416, lng:-80.475178},
+      {lat:43.444282, lng:-80.477088},
+      // King
+      {lat:43.436309, lng:-80.456941},
+       // Highway
+       {lat:43.434196, lng:-80.457710},
+       {lat:43.431602, lng:-80.461057},
+       {lat:43.430807, lng:-80.467169},
+        // Courtland
+      {lat:43.428256, lng:-80.467456},
+      {lat:43.427157, lng:-80.466394},
+      {lat:43.425301, lng:-80.465599},
+      
+      // HomerWatson
+      {lat:43.418326, lng:-80.470688},
+      {lat:43.410016, lng:-80.461296},
+      
+      // Blockline
+      {lat:43.422387, lng:-80.462176},
+      {lat:43.419254, lng:-80.465738},
+      {lat:43.418786, lng:-80.467991},
+      
+      // Bleams
+      {lat:43.401662, lng:-80.496516},
+      // Fischerhallman
+      
+      {lat:43.395800, lng:-80.494633},
+      {lat:43.391793, lng:-80.491736},
+      {lat:43.382270, lng:-80.488746},
+      // Hurron
+      {lat:43.384261, lng:-80.478109},
+      {lat:43.381544, lng:-80.453682},
+      // NewDundee Rd
+      {lat:43.365443, lng:-80.439217},
+      {lat:43.377668, lng:-80.410080},
+      {lat:43.387870, lng:-80.403255},
+      {lat:43.410338, lng: -80.391448},
+      {lat:43.415073, lng:-80.405141},
+      {lat:43.420210, lng:-80.409363},
+      {lat:43.430771, lng:-80.405709},
+      {lat:43.443357, lng:-80.387831},
+      // Fountain
+      {lat:43.448661, lng:-80.390603},
+      {lat:43.453939, lng:-80.391816},
+      {lat:43.461643, lng:-80.402790},
+      {lat:43.472770, lng:-80.402061},
+      // Bingemans
+      {lat:43.471778, lng:-80.441283},
+      // Victoria
+      {lat:43.464226, lng:-80.464582},
+      // River
+      {lat:43.458825, lng:-80.456873},
+      // Krug
+      {lat:43.457268, lng:-80.461152},
+      {lat:43.456385, lng:-80.462033},
+    ]; 
+    var waterArea = new google.maps.Polygon({
+      paths: waterArea,
+      strokeColor: '#f38125',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#f38125',
+      fillOpacity: 0.35
+    });
+    var courlandArea = new google.maps.Polygon({
+      paths: courlandArea,
+      strokeColor: '#3a96ff',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#3a96ff',
+      fillOpacity: 0.35
+    });
+
+    var kingArea = new google.maps.Polygon({
+      paths: kingArea,
+      strokeColor: '#ffdb3a',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#ffdb3a',
+      fillOpacity: 0.35
+    });
+  
+    waterArea.setMap(map);
+    courlandArea.setMap(map);
+    kingArea.setMap(map);
     // var infoWindow = new google.maps.infoWindow({
     //   content: '<H1>WATER STREET</H1>'
     // });
