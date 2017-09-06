@@ -156,9 +156,43 @@ body {
      }
     .main-item:hover {
       color: $mn-color;}
+      // Map Start
     #map {
       height: 400px;
       width: 100%; }
+    #popheader {
+      font-size: 25px;
+    }
+    .popupK{
+      background: #ffdb3a;
+      border-radius: 5px;
+      margin: 0;
+      padding: 10px;
+      text-decoration: none;
+    }
+    .popupC{
+      background: #3a96ff;
+      border-radius: 5px;
+      margin: 0;
+      padding: 10px;
+      text-decoration: none;
+    }
+    .popupW{
+      background: #f38125;
+      border-radius: 5px;
+      margin: 0;
+      padding: 10px;
+      text-decoration: none;
+    }
+    .btnLocation {
+      background: lightblue;
+      width: 150px;
+      text-align: center;
+    }
+    // #get_location {
+
+    // }
+    // Map End
 
   }
 
