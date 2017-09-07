@@ -385,7 +385,7 @@ const mapStyle = [
       strokeColor: '#f38125',
       strokeOpacity: 0.8,
       strokeWeight: 2,
-      fillColor: '#f38125',
+      // fillColor: '#f38125',
       fillOpacity: 0.35
     });
     var courlandArea = new google.maps.Polygon({
@@ -393,7 +393,7 @@ const mapStyle = [
       strokeColor: '#3a96ff',
       strokeOpacity: 0.8,
       strokeWeight: 2,
-      fillColor: '#3a96ff',
+      // fillColor: '#3a96ff',
       fillOpacity: 0.35
     });
 
@@ -402,7 +402,7 @@ const mapStyle = [
       strokeColor: '#ffdb3a',
       strokeOpacity: 0.8,
       strokeWeight: 2,
-      fillColor: '#ffdb3a',
+      // fillColor: '#ffdb3a',
       fillOpacity: 0.35
     });
   

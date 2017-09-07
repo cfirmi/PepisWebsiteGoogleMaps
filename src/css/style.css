@@ -27,6 +27,19 @@ body {
   font-size: 25px;
   cursor: pointer; }
 
+.fa-address-card-o {
+  margin-right: 5px;
+  font-size: 15px; }
+
+.fa-map-marker {
+  margin: 0px 2px; }
+
+.fa-angle-right {
+  margin-left: 5px; }
+
+.fa-angle-down {
+  margin-left: 5px; }
+
 .sidebar-nav-closed {
   position: fixed;
   background: #0F1222;
@@ -123,12 +136,8 @@ body {
     background: #0F1222; }
   .location {
     float: left; }
-  .fa-map-marker {
-    margin: 0px 2px; }
   .inside {
     color: white; }
-  .fa-arrow-circle-up:hover {
-    color: #FF8700; }
   #Y {
     height: 50px; }
   .infoNav {
@@ -142,7 +151,21 @@ body {
     text-align: center;
     padding: 0px 0;
     background: white; }
+  .sticky {
+    border-top: 1px solid rgba(0, 0, 0, 0.63);
+    position: fixed;
+    margin-top: 41px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1006; }
   .main-item {
+    height: 50px;
+    padding-top: 13px;
+    display: inline-block;
+    min-width: 50px;
+    margin-right: 20px; }
+  .main-item1 {
     height: 50px;
     padding-top: 13px;
     display: inline-block;
