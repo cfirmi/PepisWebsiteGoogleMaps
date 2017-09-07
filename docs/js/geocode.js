@@ -80,7 +80,7 @@ const mapStyle = [
       stylers: [{color: '#17263c'}]
     }
   ]
-
+ 
 
   function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -187,11 +187,6 @@ const mapStyle = [
         });
       }
     };
-   
-    
-  
-  
-
 
     var waterArea = [
       // QueenStreet
@@ -415,14 +410,7 @@ const mapStyle = [
     courlandArea.setMap(map);
     kingArea.setMap(map);
 
-    // var infoWindow = new google.maps.infoWindow({
-    //   content: '<H1>WATER STREET</H1>'
-    // });
-
-    // marker.addListener('click', function() {
-    //   infoWindow.open(map,marker);
-    // });
-
   }
+  
 
 

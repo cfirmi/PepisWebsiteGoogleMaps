@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
     $('.fa-bars').click(function() {
         $('.sidebar-nav-closed').toggleClass('sidebar-nav-opened')
@@ -12,9 +13,11 @@ $(document).ready(function() {
     });
     $('.close-rect-hidden').click(function() {
     $('.pepisLogo').toggleClass('pepisLogo-nav')
-  });
-  
+     });
+     $('.location').click(function() {
+        $('.closedLocation').toggleClass('openedLocation')
+        $('.openedLocation').toggleClass('closedLocation')
+        initMap();
+    });
 
-
-
-});
+})

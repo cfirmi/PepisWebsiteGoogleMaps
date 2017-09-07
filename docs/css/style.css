@@ -118,9 +118,17 @@ body {
   .pepisLogo {
     height: 110px; } }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 650px) {
   body {
     background: #0F1222; }
+  .location {
+    float: left; }
+  .fa-map-marker {
+    margin: 0px 2px; }
+  .inside {
+    color: white; }
+  .fa-arrow-circle-up:hover {
+    color: #FF8700; }
   #Y {
     height: 50px; }
   .infoNav {
@@ -142,9 +150,15 @@ body {
     margin-right: 20px; }
   .main-item:hover {
     color: #FF8700; }
+  .openedLocation {
+    display: inline;
+    margin: 0 auto; }
+  .closedLocation {
+    display: none; }
   #map {
+    margin: 0 auto;
     height: 400px;
-    width: 100%; }
+    width: 90%; }
   #popheader {
     font-size: 25px; }
   .popupK {
@@ -166,6 +180,33 @@ body {
     padding: 10px;
     text-decoration: none; }
   .btnLocation {
-    background: lightblue;
-    width: 150px;
-    text-align: center; } }
+    background: #00c0ff;
+    text-align: center;
+    border-radius: 13px;
+    margin-bottom: 5px;
+    border: none; }
+  .btnLocation:hover {
+    background: white; }
+  #locationTitle {
+    margin-left: 20px;
+    text-align: left;
+    color: white; }
+  #help {
+    margin-left: 20px;
+    margin-bottom: 0;
+    padding: 5px 0;
+    width: 100%;
+    color: white; }
+  #get_location {
+    background: #007EFF;
+    border: none;
+    min-width: 150px;
+    width: 5%;
+    text-align: center;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border-radius: 11px; }
+  #get_location:hover {
+    color: #FF8700;
+    background: white;
+    text-decoration: none; } }
