@@ -15,9 +15,29 @@ $(document).ready(function() {
     $('.pepisLogo').toggleClass('pepisLogo-nav')
      });
      $('.location').click(function() {
+        $('.fa-angle-right').toggleClass('fa-angle-down')
         $('.closedLocation').toggleClass('openedLocation')
         $('.openedLocation').toggleClass('closedLocation')
         initMap();
     });
+
+    var stickyNavTop = $('.secondNav').offset().top;
+    
+      var stickyNav = function(){
+        var scrollTop = $(window).scrollTop();
+    
+        if (scrollTop > stickyNavTop) { 
+          $('.secondNav').addClass('sticky');
+        } else {
+          $('.secondNav').removeClass('sticky'); 
+        }
+      };
+    
+      stickyNav();
+    
+      $(window).scroll(function() {
+        stickyNav();
+      });
+
 
 })

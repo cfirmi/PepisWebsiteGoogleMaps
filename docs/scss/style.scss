@@ -27,11 +27,25 @@ body {
     cursor: pointer;
     transition: all 0.4s ease-in-out; }
   
+    // All Font Awesome 
   .fa-bars {
     color: black;
     font-size: 25px;
     cursor: pointer; }
-  
+
+  .fa-address-card-o{
+    margin-right: 5px;
+    font-size: 15px; }
+
+  .fa-map-marker{
+    margin: 0px 2px; }
+
+  .fa-angle-right {
+    margin-left: 5px; }
+
+  .fa-angle-down {
+   margin-left: 5px; }
+
   .sidebar-nav-closed {
     position: fixed;
     background: $bg-color;
@@ -124,25 +138,19 @@ body {
     .pepisLogo {
       height: 110px; }
   }
-    @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: 650px) {
 
     body {
       background: $bg-color; }
     .location {
-      float: left;
-    }
-    .fa-map-marker{
-      margin: 0px 2px;
-    }
+      float: left; }
+
     .inside {
-      color: white;
-    }
-    .fa-arrow-circle-up:hover {
-      color: $mn-color;
-    }
+      color: white; }
 
     #Y {
       height: 50px;}
+
     .infoNav {
       display: inline; }
     
@@ -151,82 +159,96 @@ body {
 
     .openMenu {
       display: initial;}
-
+  //Sticky Navbar Class
     .secondNav {
       margin-top: 20px;
       text-align: center;
       padding: 0px 0; 
-      background: white;}
+      background: white; }
+    .sticky {
+      border-top: 1px solid rgba(0, 0, 0, 0.63);
+      position: fixed;
+      margin-top: 41px;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: 1006; }
 
     .main-item {
       height: 50px;
       padding-top: 13px;
       display: inline-block;
       min-width: 50px;
-      margin-right: 20px;
-     }
+      margin-right: 20px; }
+
+      .main-item1 {
+      height: 50px;
+      padding-top: 13px;
+      display: inline-block;
+      min-width: 50px;
+      margin-right: 20px; }
+
     .main-item:hover {
-      color: $mn-color;}
+      color: $mn-color; }
 
       // Map Start
-      .openedLocation {
-        display: inline;
-        margin: 0 auto;
-      }
-      .closedLocation {
-        display: none;
-      }
+    .openedLocation {
+      display: inline;
+      margin: 0 auto; }
+
+    .closedLocation {
+        display: none; }
+
     #map {
       margin: 0 auto;
       height: 400px;
       width: 90%; }
+
     #popheader {
-      font-size: 25px;
-    }
-    .popupK{
+      font-size: 25px; }
+
+    .popupK {
       background: #ffdb3a;
       border-radius: 5px;
       margin: 0;
       padding: 10px;
-      text-decoration: none;
-    }
-    .popupC{
+      text-decoration: none; }
+
+    .popupC {
       background: #3a96ff;
       border-radius: 5px;
       margin: 0;
       padding: 10px;
-      text-decoration: none;
-    }
-    .popupW{
+      text-decoration: none; }
+    .popupW {
       background: #f38125;
       border-radius: 5px;
       margin: 0;
       padding: 10px;
-      text-decoration: none;
-    }
- 
+      text-decoration: none; }
+
     .btnLocation {
       background: rgb(0, 192, 255);
       text-align: center;   
       border-radius: 13px;
       margin-bottom: 5px;
-      border: none;
-    }
+      border: none; }
+
     .btnLocation:hover {
-      background: white;
-    }
-    #locationTitle{
+      background: white; }
+
+    #locationTitle {
       margin-left: 20px;
       text-align: left;
-      color: white;
-    }
+      color: white; }
+
     #help {
       margin-left: 20px;
       margin-bottom: 0;
       padding: 5px 0;
       width: 100%;
-      color: white;
-    }
+      color: white; }
+    
     #get_location {
       background: #007EFF;
       border: none;
@@ -235,14 +257,12 @@ body {
       text-align: center;
       margin-left: 20px;
       margin-bottom: 10px;
-      border-radius: 11px;
-    }
-    #get_location:hover{
+      border-radius: 11px; }
+
+    #get_location:hover {
       color: $mn-color;
       background: white;
-      text-decoration: none;
-    }
+      text-decoration: none; }
     // Map End
-
+    
   }
-
