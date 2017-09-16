@@ -105,16 +105,16 @@ const mapStyle = [
            position: coords,
            map: map,
            icon: im
-         });
+         });             
       }
     
       function failure() {
          $('body').append("<p> Nope it didnt work</p>");
      }
     };
-
     //Array Of Locations
     var marker = [
+      
       {
       locations:{lat:43.4540762, lng:-80.4927792},
       iconImage:'img/icon_pizza.png',
@@ -123,12 +123,10 @@ const mapStyle = [
         <h4>Water Street</h4>
         <br>
         <div class="fa fa-map-marker"></div> <a target="_blank" href="https://www.google.com/maps/dir/43.453982,-80.4925346/Pepi's+Pizza/@43.4532057,-80.4937545,17.66z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x0:0x2395467bcb2e5e5b!2m2!1d-80.4928058!2d43.4540547">Directions: 87 Water St N</a>
-        <p>Located Near Victoria and Weber downtown Kitchener Rd</p>
-        <br>
+        <p class="nearby"><b>Located Near Victoria and Weber downtown Kitchener</b></p>
         <div class="fa fa-phone"></div> <p>Phone:<a href="tel:5195786640"> 519-578-6640</a></p> 
         </div>
       </div>
-      
       `
     },
     {
@@ -139,8 +137,7 @@ const mapStyle = [
       <h4>Courtland Ave </h4>
       <br>
       <div class="fa fa-map-marker"></div> <a target="_blank" href="https://www.google.com/maps/dir/43.453982,-80.4925346/Pepi's+Pizza+King+E+-+Famous+Pizza+%26+Toasted+Subs,+2880+King+St+E,+Kitchener,+ON+N2A+1A7,+Canada/@43.4424984,-80.4800508,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x882b8b20eca5faad:0x686ebb5fd30c0b3c!2m2!1d-80.4362147!2d43.4301004">Directions: 2880 King St E</a>
-      <p>Located Near Ottawa St and Courtland Ave</p>
-      <br>
+      <p class="nearby"><b>Located Near Ottawa St and Courtland Ave</b></p>
       <div class="fa fa-phone"></div> <p>Phone:<a href="tel:5195780820"> 519-893-8144</a></p> 
       </div>
       `
@@ -153,8 +150,7 @@ const mapStyle = [
       <h4>King Street</h4>
       <br>
       <div class="fa fa-map-marker"></div> <a target="_blank" href="https://www.google.com/maps/dir/43.453982,-80.4925346/Pepi's+Pizza/@43.4379528,-80.4791583,19.59z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x0:0x41a6bfee19c60de3!2m2!1d-80.4788599!2d43.4381794">Directions: 390 Courtland Ave E</a>
-      <p>Located Near King St E and Fairway Rd</p>
-      <br>
+      <p class="nearby"><b>Located Near King St E and Fairway Rd</b></p>
       <div class="fa fa-phone"></div> <p>Phone:<a href="tel:5198938144"> 519-893-8144</a></p> 
       </div>
       `
@@ -390,7 +386,7 @@ const mapStyle = [
     });
     var courlandArea = new google.maps.Polygon({
       paths: courlandArea,
-      strokeColor: '#3a96ff',
+      strokeColor: '#10FFC6',
       strokeOpacity: 0.8,
       strokeWeight: 2,
       // fillColor: '#3a96ff',
@@ -409,6 +405,66 @@ const mapStyle = [
     waterArea.setMap(map);
     courlandArea.setMap(map);
     kingArea.setMap(map);
+
+
+
+     // Create the search box and link it to the UI element.
+     var input = document.getElementById('pac-input');
+     var searchBox = new google.maps.places.SearchBox(input);
+     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+     // Bias the SearchBox results towards current map's viewport.
+     map.addListener('bounds_changed', function() {
+       searchBox.setBounds(map.getBounds());
+     });
+
+     var markers = [];
+     // Listen for the event fired when the user selects a prediction and retrieve
+     // more details for that place.
+     searchBox.addListener('places_changed', function() {
+       var places = searchBox.getPlaces();
+
+       if (places.length == 0) {
+         return;
+       }
+
+       // Clear out the old markers.
+       markers.forEach(function(marker) {
+         marker.setMap(null);
+       });
+       markers = [];
+
+       // For each place, get the icon, name and location.
+       var bounds = new google.maps.LatLngBounds();
+       places.forEach(function(place) {
+         if (!place.geometry) {
+           console.log("Returned place contains no geometry");
+           return;
+         }
+         var icon = {
+           url: place.icon,
+           size: new google.maps.Size(71, 71),
+           origin: new google.maps.Point(0, 0),
+           anchor: new google.maps.Point(17, 34),
+           scaledSize: new google.maps.Size(25, 25)
+         };
+         // Create a marker for each place.
+         markers.push(new google.maps.Marker({
+          map: map,
+          icon: icon,
+          title: place.name,
+          position: place.geometry.location
+        }));
+
+        if (place.geometry.viewport) {
+          // Only geocodes have viewport.
+          bounds.union(place.geometry.viewport);
+        } else {
+          bounds.extend(place.geometry.location);
+        }
+      });
+     
+    });
 
   }
   

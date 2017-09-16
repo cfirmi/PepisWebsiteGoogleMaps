@@ -1,268 +1,434 @@
 // Main Sass File
 $bg-color: #0F1222;
 $mn-color: #FF8700;
+$map-color: #FF3030;
 $trans: translate(-50%);
+$nav-bg: #0D0D12;
 
 * {
   list-style: none;
   text-decoration: none;
   color: black;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif }
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;}
+a:hover {
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.sectioncenter {
+  margin-top: 30px;
+  margin-left: 50%;
+  transform: $trans;
+  min-width: 700px;
+  max-width: 1000px;
+  text-align: center; }
+
+.sectionhead {
+  color: white; }
 
 body {
-    background: $bg-color  }
+  background: $bg-color  }
   
-  .pepisLogo {
-    height: 70px;
-    position: fixed;
-    z-index: 10001;
-    margin-top: 10px;
-    margin-left: 80%;
-    transition: all 0.4s ease-in-out; }
-  
-  .pepisLogo-nav {
-    position: fixed;
-    margin-left: 40%;
-    height: 90px;
-    cursor: pointer;
-    transition: all 0.4s ease-in-out; }
-  
-    // All Font Awesome 
-  .fa-bars {
-    color: black;
-    font-size: 25px;
-    cursor: pointer; }
+.pepisLogo {
+height: 70px;
+position: fixed;
+z-index: 10001;
+margin-top: 10px;
+margin-left: 80%;
+transition: all 0.4s ease-in-out;
+cursor: inherit; }
 
-  .fa-address-card-o{
-    margin-right: 5px;
-    font-size: 15px; }
+.pepisLogo-nav {
+position: fixed;
+margin-left: 40%;
+height: 90px;
+cursor: pointer;
+z-index: 10002;
+transition: all 0.4s ease-in-out; }
 
-  .fa-map-marker{
-    margin: 0px 2px; }
+// All Font Awesome 
+.fa {
+cursor: pointer;
+margin-right: 5px;
+margin-left:  5px; }
 
-  .fa-angle-right {
-    margin-left: 5px; }
+.fa-bars {
+color: black;
+font-size: 25px;
+cursor: pointer; }
 
-  .fa-angle-down {
-   margin-left: 5px; }
+.fa-home {
+color: $bg-color; }
 
-  .sidebar-nav-closed {
-    position: fixed;
-    background: $bg-color;
-    height: 100vh;
-    width: 40%;
-    top: 0;
-    left: -40%;
-    transition: all 0.4s ease-in-out; }
-  
-  .sidebar-nav-opened {
-    position: fixed;
-    background: white;
-    height: 100vh;
-    width: 40%;
-    top: 0;
-    left: 0px;
-    border-right: 4px solid white;
-    z-index: 10009; }
-  
-  .close-rect-hidden {
-    top: 0;
-    left: 0%;
-    position: fixed;
-    width: 100%;
-    transition: all 0.6s ease-in-out;
-    z-index: 1001; }
-  
-  .close-rect-showing {
-    top: 0;
-    left: 0;
-    position: fixed;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.76);
-    margin-left: 40%;
-    height: 100vh;
-    transition: all 0.6s ease-in-out;
-    cursor: pointer; }
+.fa-address-card-o{
+font-size: 15px; }
 
-  .mobileTitle1 {
-    position: absolute;
-    width: 100%;
-    margin-top: 50px;
-    margin-left: 50%;
-    text-align: center;
-    transform: $trans;
-    color: $mn-color; 
-    text-transform: uppercase;}
-    
-  .mobileTitle2 {
-    position: absolute;
-    margin-top: 60px;
-    font-size: 90px;
-    margin-left: 50%;
-    transform: $trans;
-    text-transform: uppercase; }
+.fa-info {
+font-size: 15px; }
 
-  #title {
-    color: $mn-color; }
+.fa-map-marker{
+margin: 0px 2px;
+cursor: inherit;
+color: white; }
 
-  #Y {
-    height: 30px;
-  margin-top: 180px;
-  margin-left: 50%;
-  transform: $trans; }
+.fa-times {
+color: white;
+margin-right: 40px;
+float: right }
 
-  .sidenav {
-    height: 50vh;
-    padding-left: 0px;
-    margin-top: 30px; }
+.addingred {
+color: $map-color; }
 
-  .sidenav-item {
-    padding-left: 15px;
-    padding-bottom: 10px;
-    background: white;
-    padding-top: 25px;
-    border-bottom: 0.5px solid rgba(38, 38, 38, 0.24);
-    text-transform: capitalize;  }
+.fa-angle-down{
+float: right;
+color: $bg-color;
+margin-right: 10%; }
 
-  .sidenav-item:hover {
-    color: $mn-color;}
-        
-  .infoNav {
-    display: none;
-  }
-  .openMenu {
-    display: none;
-  }
+.sidebar-nav-closed {
+position: fixed;
+background: $bg-color;
+height: 100vh;
+width: 40%;
+top: 0;
+left: -40%;
+transition: all 0.4s ease-in-out; }
+
+.sidebar-nav-opened {
+position: fixed;
+background: white;
+height: 100vh;
+width: 50%;
+top: -10;
+left: 0px;
+border-right: 4px solid white;
+z-index: 10009;
+overflow-y: scroll;
+}
+
+.close-rect-hidden {
+top: 0;
+left: 0%;
+position: fixed;
+width: 100%;
+transition: all 0.6s ease-in-out;
+z-index: 1001; }
+
+.close-rect-showing {
+top: 0;
+left: 0;
+position: fixed;
+width: 100%;
+background: rgba(255, 255, 255, 0.76);
+margin-left: 40%;
+height: 100vh;
+transition: all 0.6s ease-in-out;
+cursor: pointer; }
+
+.mobileTitle1 {
+position: absolute;
+width: 100%;
+margin-top: 70px;
+margin-left: 50%;
+text-align: center;
+transform: $trans;
+color: $mn-color;
+cursor: default; 
+text-transform: uppercase;}
+
+.mobileTitle2 {
+position: absolute;
+margin-top: 80px;
+font-size: 90px;
+margin-left: 50%;
+transform: $trans;
+cursor: default;
+text-transform: uppercase; }
+
+#title {
+color: $mn-color; }
+
+#Y {
+height: 30px;
+margin-top: 200px;
+margin-left: 50%;
+transform: $trans; }
+
+.sidenav {
+overflow-y: scroll;
+padding-left: 0;
+margin-top: 30px; }
+#sidetitle {
+font-size: 23px;
+margin-top: 20px;
+margin-left: 5px;
+cursor: default; }
+
+.sidenav-item {
+padding-left: 15px;
+padding-bottom: 10px;
+background: white;
+padding-top: 25px;
+border-bottom: 1px solid rgba(38, 38, 38, 0.24);
+text-transform: capitalize;  }
+
+.sidenav-item > a {
+color: black;
+}
+
+.sidenav-image {
+margin-bottom: 10px;
+background: blue;
+width: 100%;
+}
+.main-image {
+margin-left: 10px;
+margin-bottom: 10px;
+background: blue; }
+
+.menu-items {
+
+// background: blue;
+margin-bottom: 10px; }
+
+.sidenav-item:hover {
+color: $mn-color; }
+
+.infoNav {
+display: none; }
+
+.openMenu {
+display: none; }
 
   @media only screen and (min-width: 350px) {
-    .pepisLogo {
-      height: 110px; }
+  .pepisLogo {
+  height: 110px; }
   }
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: 725px) {
 
-    body {
-      background: $bg-color; }
-    .location {
-      float: left; }
+  body {
+  background: $bg-color; }
+  .fa-home{
+  color: white;
+  }
+  .location {
+  float: left; }
 
-    .inside {
-      color: white; }
+  .inside {
+  color: $map-color; }
 
-    #Y {
-      height: 50px;}
+  #Y {
+  height: 50px;}
 
-    .infoNav {
-      display: inline; }
-    
-    .foodNav {
-      display: none; }
+  .infoNav {
+  display: inline; }
 
-    .openMenu {
-      display: initial;}
+  .foodNav {
+  display: none; }
+
+  .openMenu {
+  display: initial; }
   //Sticky Navbar Class
-    .secondNav {
-      margin-top: 20px;
-      text-align: center;
-      padding: 0px 0; 
-      background: white; }
-    .sticky {
-      border-top: 1px solid rgba(0, 0, 0, 0.63);
-      position: fixed;
-      margin-top: 41px;
-      width: 100%;
-      left: 0;
-      top: 0;
-      z-index: 1006; }
 
-    .main-item {
-      height: 50px;
-      padding-top: 13px;
-      display: inline-block;
-      min-width: 50px;
-      margin-right: 20px; }
+  .secondNav {
+  margin-top: 41px;
+  height: 55px;
+  text-align: center;
+  padding: 0px 0; 
+  background: $nav-bg;
+  box-shadow: 0 -100px 980px $mn-color; }
 
-      .main-item1 {
-      height: 50px;
-      padding-top: 13px;
-      display: inline-block;
-      min-width: 50px;
-      margin-right: 20px; }
+  .thirdnav {
+  height: 50px;
+  text-align: center;
+  min-width: 800px;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 25px;
+  background: $nav-bg;
+  border: 1px solid white; }
+ 
 
-    .main-item:hover {
-      color: $mn-color; }
+  .pizzanav {
+  color: $bg-color;}
 
-      // Map Start
-    .openedLocation {
-      display: inline;
-      margin: 0 auto; }
+  .sticky {
+  position: fixed;
+  margin-top: 41px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1006; }
 
-    .closedLocation {
-        display: none; }
+  .sticky2 {
+    top: 100px;
+    height: 50px;
+    position: fixed;
+    z-index: 1006;
+    text-align: center;
+    min-width: 800px;
+    max-width: 800px;
+    margin-left: 50%;
+    transform: $trans;
+    border-radius: 25px; }
 
-    #map {
-      margin: 0 auto;
-      height: 400px;
-      width: 90%; }
+  .main-item {
+  color: white;
+  cursor: pointer;
+  height: 50px;
+  padding-top: 13px;
+  display: inline-block;
+  min-width: 50px;
+  margin-right: 20px; }
 
-    #popheader {
-      font-size: 25px; }
+  .main-item1 {
+  height: 50px;
+  padding-top: 13px;
+  display: inline-block;
+  min-width: 50px;
+  margin-right: 20px; }
 
-    .popupK {
-      background: #ffdb3a;
-      border-radius: 5px;
-      margin: 0;
-      padding: 10px;
-      text-decoration: none; }
+  .main-item:hover {
+  color: $mn-color; }
 
-    .popupC {
-      background: #3a96ff;
-      border-radius: 5px;
-      margin: 0;
-      padding: 10px;
-      text-decoration: none; }
-    .popupW {
-      background: #f38125;
-      border-radius: 5px;
-      margin: 0;
-      padding: 10px;
-      text-decoration: none; }
+  .pizza-item {
+  cursor: pointer;
+  height: 50px;
+  padding-top: 13px;
+  display: inline-block;
+  min-width: 50px;
+  margin-right: 20px;
+  color: white; }
 
-    .btnLocation {
-      background: rgb(0, 192, 255);
-      text-align: center;   
-      border-radius: 13px;
-      margin-bottom: 5px;
-      border: none; }
+  .pizza-item:hover {
+  color: $mn-color; }
 
-    .btnLocation:hover {
-      background: white; }
+  // Map Start
+  .openedLocation {
+  padding-top: 20px;
+  margin: 0 auto; }
 
-    #locationTitle {
-      margin-left: 20px;
-      text-align: left;
-      color: white; }
+  .closedLocation {
+  display: none; }
 
-    #help {
-      margin-left: 20px;
-      margin-bottom: 0;
-      padding: 5px 0;
-      width: 100%;
-      color: white; }
-    
-    #get_location {
-      background: #007EFF;
-      border: none;
-      min-width: 150px;
-      width: 5%;
-      text-align: center;
-      margin-left: 20px;
-      margin-bottom: 10px;
-      border-radius: 11px; }
+  #map {
+  margin: 0 auto;
+  margin-bottom: 15px;
+  height: 500px;
+  width: 100%; }
+  
+  #pac-input {
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    transform: translate(10%);
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 500px;
+    height: 35px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+  }
 
-    #get_location:hover {
-      color: $mn-color;
-      background: white;
-      text-decoration: none; }
-    // Map End
-    
+  #popheader {
+  font-size: 25px; }
+
+  .popupK {
+  background: #ffdb3a;
+  border-radius: 5px;
+  margin: 0;
+  padding: 10px;
+  text-decoration: none; }
+
+  .popupC {
+  background: #10FFC6;
+  border-radius: 5px;
+  margin: 0;
+  padding: 10px;
+  text-decoration: none; }
+  .popupW {
+  background: #f38125;
+  border-radius: 5px;
+  margin: 0;
+  padding: 10px;
+  text-decoration: none; }
+
+  .btnLocation {
+  background: rgb(0, 192, 255);
+  text-align: center;   
+  border-radius: 13px;
+  margin-bottom: 5px;
+  border: none; }
+
+  .btnLocation:hover {
+  background: white; }
+
+  #locationTitle {
+  margin-left: 20px;
+  text-align: left;
+  color: white; }
+
+  #help {
+  margin-left: 20px;
+  margin-bottom: 0;
+  padding: 5px 0;
+  width: 100%;
+  color: white; }
+
+  #get_location {
+  background: #007EFF;
+  border: none;
+  min-width: 150px;
+  max-width: 150px;
+  height: 30px;
+  margin-left: 20px;
+  text-align: center;
+  padding-top: 3px;
+  margin-bottom: 10px;
+  border-radius: 11px;
+  cursor: pointer; }
+
+  #get_location:hover {
+  color: $mn-color;
+  background: white;
+  text-decoration: none; }
+  // Map End
+
+
+  .nearby {
+  font-size: 15px;
+
+  }
+  .home-mobile {
+  display: none;
+  }
+
+  }
+
+  // Pizza CSS STYLES START RIGHT HERE
+  .home{
+  float: right;
+  }
+  .view-menu{
+  margin-top: 42px;
+  text-decoration: none;
+
+  }
+  .mainnav {
+  padding-left: 0;
+  margin-top: 30px; }
+
+  .mainnav-item {
+  padding-left: 15px;
+  padding-bottom: 10px;
+  background: white;
+  padding-top: 25px;
+  border-bottom: 1px solid rgba(38, 38, 38, 0.24);
+  text-transform: capitalize;  }
+
+  .sizes {
+  margin-left: 50%;
+  transform: $trans;
+  width: 60%;
   }

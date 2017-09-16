@@ -14,20 +14,11 @@
     <body>
         <nav class="navbar navbar-expand-md bg-white fixed-top">
             <div class="fa fa-bars"></div>
-            <a href="index.html"></a>
+            <a href="index.html">
+            <i class="fa fa-home home-mobile" aria-hidden="true"></i>
+            </a>
         </nav>
-        <a href="index.html"><img class="pepisLogo" draggable="false" src="img/pepis-guy.png" alt=""></a>
-        
-        <div class="mobileTitle1">
-            <h1 unselectable="on">welcome to</h1>
-        </div>
-           
-        <div class="mobileTitle2">
-             <p unselectable="on" id="title">pepi's</p>
-        </div>
             
-        <img id="Y" draggable="false" src="img/50yrs.png">
-
         <section class="foodNav">
             <div class="sidebar-nav-closed">
                 <div class="menu-items">
@@ -45,7 +36,23 @@
                         <a href="#"><li class="sidenav-item salads"><i class="fa fa-info-circle" aria-hidden="true"></i></i>About Pepi's</li>
                     </ul>
                 </div>
-            </div>  
+            </div>
+            <div class="view-menu">
+                <ul class="mainnav">
+                    <a href="#"><li id="sizes" class="mainnav-item">Sizes<i class="fa fa-angle-down" aria-hidden="true"></i></li>
+                    </a>
+                    <a href="#"><li id="styles" class="mainnav-item">Styles Of Pizza<i class="fa fa-angle-down" aria-hidden="true"></i></li>
+                    </a>
+                    <a href="#"><li id="specials" class="mainnav-item">Specials<i class="fa fa-angle-down" aria-hidden="true"></i></li>
+                    </a>
+                    <a href="#"><li id="toppings" class="mainnav-item">Toppings<i class="fa fa-angle-down" aria-hidden="true"></i></li>
+                    </a>
+                    <a href="#"><li id="basic" class="mainnav-item">Basic Pizza<i class="fa fa-angle-down" aria-hidden="true"></i></li>
+                    </a>
+                    <a href="#"><li id="danger" class="mainnav-item">Danger Zone<i class="fa fa-angle-down" aria-hidden="true"></i></li>
+                    </a>
+                </ul>
+            </div>
         </section>
         <!-- Mobile Side Navigation -->
         
@@ -54,26 +61,24 @@
             <div class="sidebar-nav-closed">
                 <div class="menu-items">
                     <ul class="sidenav">
-                        <a href="#"><li class="sidenav-item corpoate"><i class="fa fa-copyright" aria-hidden="true"></i>Corporate Orders</li></a>
-                        <a href="#"><li class="sidenav-item contact"><i class="fa fa-address-card-o" aria-hidden="true"></i>Contact</li></a>
-                        <a href="#"><li class="sidenav-item about"><i class="fa fa-info-circle" aria-hidden="true"></i></i>About Pepi's</li>
+                        <a href="#"><li class="sidenav-item subs"><i class="fa fa-copyright" aria-hidden="true"></i>Corporate Orders</li></a>
+                        <a href="#"><li class="sidenav-item chicken"><i class="fa fa-address-card-o" aria-hidden="true"></i>Contact</li></a>
+                        <a href="#"><li class="sidenav-item salads"><i class="fa fa-info-circle" aria-hidden="true"></i></i>About Pepi's</li>
                     </ul>
                 </div>
-                <div class="container">
-                    
-                    <a href="#"><img class="sidenav-image" src="http://via.placeholder.com/550x500"></a>
-                    <a href="#"><img class="sidenav-image" src="http://via.placeholder.com/550x500"></a>
-                </div>
+            <div class="container">
+                <a href="https://placeholder.com"><img class="sidenav-image" src="http://via.placeholder.com/550x500"></a>
+                <a href="https://placeholder.com"><img class="sidenav-image" src="http://via.placeholder.com/550x500"></a>
+            </div>
             </div>
          </section>
         <!-- Desktop Side Navigation -->
 
         <!-- Desketop Navigation strip -->
-        
         <section class="openMenu">
             <div class="secondNav">
-                 <ul class="menuView">
-                    <li class=" main-item location"><i class="fa fa-map-marker"></i>Pepi's Finder</i></li>
+                    <ul class="menuView">
+                    <li class=" main-item location"><i class="fa fa-map-marker"></i>Locations</i></li>
                     <a href="pizza.html"><li class="main-item pizza">pizza</li></a>
                     <a href="subs.html"><li class="main-item subs">subs</li></a>
                     <a href="chicken.html"><li class="main-item chicken">chicken</li></a>
@@ -85,15 +90,9 @@
                     </a>
                 </ul>   
             </div>
-            
             <div class="closedLocation">
-                <h4 id="locationTitle"><i class="inside fa fa-map-marker"></i>Find Your Location<i class="fa fa-times"></i></h4>
-                <p id="help">Allow current location to firgure out which store you should call! Or use the Search Box</p>
-                <div class="unit"> 
-                    <input id="pac-input" type="text" placeholder="Search Box">
-                    <p id="get_location">Your Location</p>
-                </div>
-                
+                <h4 id="locationTitle"><i class="inside fa fa-map-marker"></i>Find Your Location<i class="fa fa-times"></i></h4>                <p id="help">Allow current location to firgure out which store you should call!</p>
+                <div id="get_location">Your Location</div>
                 <div id="map"></div>
             </div>
             <div class="container">
@@ -116,9 +115,8 @@
         <script src="js/navbar.js"></script>
         <script src="js/mobile-menu.js"></script>
         <script src="js/geocode.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvMxiN4BDd_lYfXdbmJivmRiE2rKz1v9s&libraries=places"></script>
-        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfSSPwP0QXxhxU3CT08Gj-0ksvxB6LIic&callback=initMap"
-        async defer></script> -->
-
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfSSPwP0QXxhxU3CT08Gj-0ksvxB6LIic&callback=initMap"
+        async defer></script>
+        
     </body>
 </html>
