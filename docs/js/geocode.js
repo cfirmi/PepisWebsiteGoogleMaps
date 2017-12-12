@@ -406,8 +406,6 @@ const mapStyle = [
     courlandArea.setMap(map);
     kingArea.setMap(map);
 
-
-
      // Create the search box and link it to the UI element.
      var input = document.getElementById('pac-input');
      var searchBox = new google.maps.places.SearchBox(input);
@@ -433,7 +431,6 @@ const mapStyle = [
          marker.setMap(null);
        });
        markers = [];
-
        // For each place, get the icon, name and location.
        var bounds = new google.maps.LatLngBounds();
        places.forEach(function(place) {
@@ -442,7 +439,7 @@ const mapStyle = [
            return;
          }
          var icon = {
-           url: place.icon,
+           url: "https://www.hampshireattractions.co.uk/app/themes/hta/assets/images/icons/location_icon.png",
            size: new google.maps.Size(71, 71),
            origin: new google.maps.Point(0, 0),
            anchor: new google.maps.Point(17, 34),

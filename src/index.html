@@ -16,16 +16,16 @@
             <div class="fa fa-bars"></div>
             <a href="index.html"></a>
         </nav>
-        <a href="index.html"><img class="pepisLogo" draggable="false" src="img/pepis-guy.png" alt=""></a>
+        <a href="index.html"><img class="pepisLogo" draggable="false" src="img/pepis-guy.svg" alt=""></a>
         
-        <div class="mobileTitle1">
+        <!-- <div class="mobileTitle1">
             <h1 unselectable="on">welcome to</h1>
         </div>
            
         <div class="mobileTitle2">
              <p unselectable="on" id="title">pepi's</p>
-        </div>
-            
+        </div> -->
+        <img id="title" src="img/pepisSign.svg" alt="">
         <img id="Y" draggable="false" src="img/50yrs.png">
 
         <section class="foodNav">
@@ -71,7 +71,7 @@
         <!-- Desketop Navigation strip -->
         
         <section class="openMenu">
-            <div class="secondNav">
+            <div id="secondnav1" class="secondNav">
                  <ul class="menuView">
                     <li class=" main-item location"><i class="fa fa-map-marker"></i>Pepi's Finder</i></li>
                     <a href="pizza.html"><li class="main-item pizza">pizza</li></a>
@@ -93,13 +93,12 @@
                     <input id="pac-input" type="text" placeholder="Search Box">
                     <p id="get_location">Your Location</p>
                 </div>
-                
                 <div id="map"></div>
             </div>
-            <div class="container">
-            <a href="https://placeholder.com"><img class="sidenav-image" src="http://via.placeholder.com/550x500"></a>
-            <a href="https://placeholder.com"><img class="sidenav-image" src="http://via.placeholder.com/550x500"></a>
-        </div>
+            <div id="main-comp" class="container">
+                <a href="https://placeholder.com"><img class="sidenav-image" src="http://via.placeholder.com/550x500"></a>
+                <a href="https://placeholder.com"><img class="sidenav-image" src="http://via.placeholder.com/550x500"></a>
+            </div>
         </section>
 
         <!-- Desketop Navigation strip -->
@@ -109,6 +108,18 @@
             <div class="blank"></div>
         </div>
         <!-- Close SideBar End -->
+        <!-- Secondnav color changer -->
+        <script> 
+        setInterval(function() {
+        var x = Math.round(Math.random() * 255 );
+        var y = Math.round(Math.random() * 255 );
+        var z = Math.round(Math.random() * 255 );
+        var box = "box-shadow: 0 -100px 980px rgb("+x+", "+y+", "+z+");";
+        var element = document.getElementById("secondnav1"); 
+        element.style = box;
+        }, 4000);
+        </script>
+
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="js/jquery.min.js"></script>
         <script src="js/popper.min.js"></script>
@@ -117,8 +128,7 @@
         <script src="js/mobile-menu.js"></script>
         <script src="js/geocode.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvMxiN4BDd_lYfXdbmJivmRiE2rKz1v9s&libraries=places"></script>
-        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfSSPwP0QXxhxU3CT08Gj-0ksvxB6LIic&callback=initMap"
-        async defer></script> -->
+        
 
     </body>
 </html>

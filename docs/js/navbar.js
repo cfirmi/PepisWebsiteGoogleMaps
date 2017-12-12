@@ -45,7 +45,7 @@ $(document).ready(function() {
       };
       stickyNav();
 
-      var stickyNavTop2 = $('.thirdnav').offset().top;
+      var stickyNavTop2 = $('.thirdnav').offset().top + 20;
       
         var stickyNav2 = function(){
           var scrollTop = $(window).scrollTop();
@@ -62,5 +62,5 @@ $(document).ready(function() {
           stickyNav2();
         });
 
-
 })
+

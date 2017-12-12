@@ -78,7 +78,7 @@
         <section class="openMenu">
             <div class="secondNav">
                     <ul class="menuView">
-                    <li class=" main-item location"><i class="fa fa-map-marker"></i>Locations</i></li>
+                    <li class=" main-item location"><i class="fa fa-map-marker"></i>Pepi's Finder</i></li>
                     <a href="pizza.html"><li class="main-item pizza">pizza</li></a>
                     <a href="subs.html"><li class="main-item subs">subs</li></a>
                     <a href="chicken.html"><li class="main-item chicken">chicken</li></a>
@@ -91,14 +91,17 @@
                 </ul>   
             </div>
             <div class="closedLocation">
-                    <h4 id="locationTitle"><i class="inside fa fa-map-marker"></i>Find Your Location<i class="fa fa-times"></i></h4>                <p id="help">Allow current location to firgure out which store you should call!</p>
-                <div id="get_location">Your Location</div>
+                <h4 id="locationTitle"><i class="inside fa fa-map-marker"></i>Find Your Location<i class="fa fa-times"></i></h4>
+                <p id="help">Allow current location to firgure out which store you should call! Or use the Search Box</p>
+                <div class="unit"> 
+                    <input id="pac-input" type="text" placeholder="Search Box">
+                    <p id="get_location">Your Location</p>
+                </div>
                 <div id="map"></div>
             </div>
             <div class="container">
-            <a href="https://placeholder.com"><img class="sidenav-image" src="http://via.placeholder.com/550x500"></a>
-            <a href="https://placeholder.com"><img class="sidenav-image" src="http://via.placeholder.com/550x500"></a>
-        </div>
+                
+            </div>
         </section>
 
         <!-- Desketop Navigation strip -->
@@ -115,8 +118,8 @@
         <script src="js/navbar.js"></script>
         <script src="js/mobile-menu.js"></script>
         <script src="js/geocode.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfSSPwP0QXxhxU3CT08Gj-0ksvxB6LIic&callback=initMap"
-        async defer></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvMxiN4BDd_lYfXdbmJivmRiE2rKz1v9s&libraries=places"></script>
+        
         
     </body>
 </html>

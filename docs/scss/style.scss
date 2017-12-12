@@ -17,15 +17,18 @@ a:hover {
   display: none;
 }
 .sectioncenter {
-  margin-top: 30px;
+  margin-top: 25px;
   margin-left: 50%;
   transform: $trans;
-  min-width: 700px;
+  min-width: 800px;
   max-width: 1000px;
   text-align: center; }
 
 .sectionhead {
-  color: white; }
+  color: white;
+  text-align: left;
+  margin-left: 40px; 
+  font-size: 25px; }
 
 body {
   background: $bg-color  }
@@ -41,7 +44,7 @@ cursor: inherit; }
 
 .pepisLogo-nav {
 position: fixed;
-margin-left: 40%;
+margin-left: 51%;
 height: 90px;
 cursor: pointer;
 z-index: 10002;
@@ -80,10 +83,9 @@ float: right }
 .addingred {
 color: $map-color; }
 
-.fa-angle-down{
-float: right;
-color: $bg-color;
-margin-right: 10%; }
+.fa-phone {
+  color: white;
+}
 
 .sidebar-nav-closed {
 position: fixed;
@@ -235,8 +237,11 @@ display: none; }
   height: 55px;
   text-align: center;
   padding: 0px 0; 
-  background: $nav-bg;
+  background: $nav-bg; 
   box-shadow: 0 -100px 980px $mn-color; }
+  #secondnav1 {
+    transition: 1s;
+  }
 
   .thirdnav {
   height: 50px;
@@ -244,6 +249,7 @@ display: none; }
   min-width: 800px;
   max-width: 800px;
   margin: 0 auto;
+  margin-top: 10px;
   border-radius: 25px;
   background: $nav-bg;
   border: 1px solid white; }
@@ -337,20 +343,26 @@ display: none; }
   .popupK {
   background: #ffdb3a;
   border-radius: 5px;
-  margin: 0;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
   padding: 10px;
   text-decoration: none; }
 
   .popupC {
   background: #10FFC6;
   border-radius: 5px;
-  margin: 0;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
   padding: 10px;
   text-decoration: none; }
   .popupW {
   background: #f38125;
   border-radius: 5px;
-  margin: 0;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
   padding: 10px;
   text-decoration: none; }
 
@@ -395,7 +407,9 @@ display: none; }
   text-decoration: none; }
   // Map End
 
-
+  #main-comp {
+    margin-top: 25px;
+  }
   .nearby {
   font-size: 15px;
 
