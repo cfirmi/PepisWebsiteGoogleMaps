@@ -148,11 +148,16 @@ cursor: default;
 text-transform: uppercase; }
 
 #title {
-color: $mn-color; }
+  margin-top: 100px;
+color: $mn-color;
+margin-left: 50%;
+transform: $trans;
+height: 200px;
+ }
 
 #Y {
 height: 30px;
-margin-top: 200px;
+margin-top: -30px;
 margin-left: 50%;
 transform: $trans; }
 
@@ -183,10 +188,7 @@ margin-bottom: 10px;
 background: blue;
 width: 100%;
 }
-.main-image {
-margin-left: 10px;
-margin-bottom: 10px;
-background: blue; }
+
 
 .menu-items {
 
@@ -211,7 +213,8 @@ display: none; }
   body {
   background: $bg-color; }
   .fa-home{
-  color: white;
+    font-size: 30px;
+    color: white;
   }
   .location {
   float: left; }
@@ -239,17 +242,19 @@ display: none; }
   padding: 0px 0; 
   background: $nav-bg; 
   box-shadow: 0 -100px 980px $mn-color; }
+
   #secondnav1 {
     transition: 1s;
   }
 
   .thirdnav {
   height: 50px;
-  text-align: center;
-  min-width: 800px;
-  max-width: 800px;
+  display: flex;
+  justify-content: space-around;
+  min-width: 700px;
+  max-width: 700px;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 40px;
   border-radius: 25px;
   background: $nav-bg;
   border: 1px solid white; }
@@ -424,6 +429,32 @@ display: none; }
   .home{
   float: right;
   }
+  .justify {
+    display: flex;
+    justify-content: space-around;
+  }
+  .pizza-image {
+  margin-bottom: 10px; }
+  .special-image {
+    margin: 1px 5px;
+  }
+
+.spacers {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 85%;
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+.pizzaSize {
+  min-width:1000px;
+}
+.pizzaSpecials {
+  color: white;
+}
+.topping-image {
+  margin: 1px;
+}
   .view-menu{
   margin-top: 42px;
   text-decoration: none;
